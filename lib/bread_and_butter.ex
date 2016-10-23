@@ -11,7 +11,7 @@ defmodule BreadAndButter do
 	def times3thenPlus5(number), 
 	do: number |> times3() |> plus5() #==> plus5(times3(number))
 
-	# working with lists and pattern matching
+	# working with lists, pattern matching and guard clauses
 
 	def sum_list(list), 
 	do: do_sum_list(list, 0)

@@ -18,28 +18,27 @@ defmodule BreadAndButterTest do
     assert BreadAndButter.times3thenPlus5(5) == 20
   end
 
-  test "the sum of 1..10 equals 55" do
-    assert BreadAndButter.sum_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 55
+  describe "BreadAndButter.sum_list" do
+    test "the sum of 1..10 equals 55" do
+      assert BreadAndButter.sum_list([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 55
+    end
+
+    test "the sum of an empty list is zero" do
+      assert BreadAndButter.sum_list([]) == 0
+    end
   end
 
-  test "the sum of an empty list is zero" do
-    assert BreadAndButter.sum_list([]) == 0
-  end
+  describe "BreadAndButter.tribonacci" do
+    test "the first 3 Tribonacci numbers are equal to 1" do
+      assert BreadAndButter.tribonacci(0) == 1
+      assert BreadAndButter.tribonacci(1) == 1
+      assert BreadAndButter.tribonacci(2) == 1
+    end
 
-  test "Triboncci number a(0) equals 1" do
-    assert BreadAndButter.tribonacci(0) == 1
+    # http://oeis.org/A000213
+    test "the 10th Triboncci number is equal to 193" do
+      assert BreadAndButter.tribonacci(10) == 193
+    end
   end
-
-  test "Triboncci number a(1) equals 1" do
-    assert BreadAndButter.tribonacci(1) == 1
-  end
-
-  test "Triboncci number a(2) equals 1" do
-    assert BreadAndButter.tribonacci(2) == 1
-  end
-
-  # http://oeis.org/A000213
-  test "Triboncci number a(10) equals 193" do
-    assert BreadAndButter.tribonacci(10) == 193
-  end
+  
 end
