@@ -22,13 +22,7 @@ defmodule BreadAndButter do
 	defp do_sum_list([head | tail], sum), 
 	do: do_sum_list(tail, sum + head)
 
-	def tribonacci(0), 
-	do: 1
-
-	def tribonacci(1), 
-	do: 1
-
-	def tribonacci(2), 
+	def tribonacci(n) when n <= 2, 
 	do: 1
 
 	def tribonacci(n), 
